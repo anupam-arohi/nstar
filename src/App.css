@@ -1,3 +1,7 @@
+/* Add a left margin utility for the main container if not using Tailwind */
+.left-margin {
+  margin-left: 2rem;
+}
 .App {
   text-align: center;
 }

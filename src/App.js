@@ -56,24 +56,29 @@ export default function App() {
   const today = formatDate(new Date());
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-8">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-8 ml-8">
       <h1 className="text-4xl font-bold mb-1 text-center">Your North-Star Today!</h1>
       <h2 className="text-xl mb-8 text-center">{today}</h2>
 
       <div className="flex flex-col md:flex-row items-start justify-center w-full max-w-5xl gap-16">
-        <div className="flex flex-col gap-4 w-full max-w-sm">
+        <div className="flex flex-col w-full max-w-sm">
           {categories.map((cat, i) => (
-            <div key={cat.name} className="flex items-center gap-4 w-full">
-              <input
-                type="range"
-                min={0}
-                max={10}
-                step={1}
-                value={values[i]}
-                onChange={(e) => handleSliderChange(i, e)}
-                className="flex-grow accent-blue-600 order-1"
-              />
-              <label className="w-28 text-base text-left order-2">{cat.name}</label>
+            <div key={cat.name} className="flex flex-col w-full">
+              <div className="flex items-center gap-4 w-full">
+                <input
+                  type="range"
+                  min={0}
+                  max={10}
+                  step={1}
+                  value={values[i]}
+                  onChange={(e) => handleSliderChange(i, e)}
+                  className="flex-grow accent-blue-600 order-1"
+                />
+                <label className="w-28 text-base text-left order-2">{cat.name}</label>
+              </div>
+              {i !== categories.length - 1 && (
+                <div style={{ height: 32 }} />
+              )}
             </div>
           ))}
         </div>
