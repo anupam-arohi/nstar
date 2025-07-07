@@ -1,5 +1,5 @@
 {
-  "homepage": "https://anupam-arohi.github.io/north-star",
+  "homepage": "https://anupam-arohi.github.io/nstar",
   "name": "north_star",
   "version": "0.1.0",
   "private": true,
@@ -39,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
